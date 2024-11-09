@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('Title');
             $table->string('Author');
             $table->string('Publisher');
-            $table->date('Year_Published');
+            $table->year('Year_Published');
             $table->integer('Pages');
             $table->text('Description');
             $table->bigInteger('Price');

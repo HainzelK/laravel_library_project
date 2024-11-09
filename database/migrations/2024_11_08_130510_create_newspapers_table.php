@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('journals', function (Blueprint $table) {
+        Schema::create('newspapers', function (Blueprint $table) {
             $table->id();
             $table->string('Title');
             $table->string('Author');
-            $table->string('Publisher');
             $table->year('Year_Published');
             $table->integer('Pages');
-            $table->text('Abstract');
             $table->bigInteger('Price');
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('journals');
+        Schema::dropIfExists('newspapers');
     }
 };
